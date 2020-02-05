@@ -1,4 +1,0 @@
-[build]
-  command = "npm run build"
-  publish="C:\Users\jschmidt\Desktop\Git Repos\magicHealthTrackerReact\my-app\src\App.js"
-  base = "C:\Users\jschmidt\Desktop\Git Repos\magicHealthTrackerReact\my-app\src\App.js"
