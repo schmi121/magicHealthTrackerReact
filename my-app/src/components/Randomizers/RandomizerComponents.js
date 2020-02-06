@@ -3,24 +3,16 @@ import styles from './styles.module.css';
 
 const RandomizerComponents = props => {
     
-    const playerOrder = [1, 2, 3]
     const sixSidedDieArray = ['1', '2', '3', '4', '5', '6'];
     const coinFlipArray = ['Heads', 'Tails'];
 
-    let randomPlayerOrder
     let randomDieRoll
     let randomCoinFlip
 
-    console.log(props.numPlayers);
-
-    function firstPlayer() {
-        randomPlayerOrder = playerOrder[Math.floor(Math.random() * playerOrder.length)];
-    }
-
     const submitRandomHandler = e => {
         e.preventDefault();
-        firstPlayer();
-        alert (`${randomPlayerOrder} player goes first`);
+        let randomNumber = new Array(props.numPlayers).fill().map((_, i) => i+1)[Math.floor(Math.random() * props.numPlayers)];
+        alert(`Player ${randomNumber} goes first`);
     };
 
     function dieRoll() {
