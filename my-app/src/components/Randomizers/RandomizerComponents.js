@@ -1,15 +1,17 @@
 import React, { useState } from 'react';
 import styles from './styles.module.css';
 
-const RandomizerComponents = () => {
+const RandomizerComponents = props => {
     
-    const playerOrder = ['Blue', 'Red', 'Green', 'Yellow', 'Pink', 'Salmon'];
+    const playerOrder = [1, 2, 3]
     const sixSidedDieArray = ['1', '2', '3', '4', '5', '6'];
     const coinFlipArray = ['Heads', 'Tails'];
 
     let randomPlayerOrder
     let randomDieRoll
     let randomCoinFlip
+
+    console.log(props.numPlayers);
 
     function firstPlayer() {
         randomPlayerOrder = playerOrder[Math.floor(Math.random() * playerOrder.length)];
@@ -20,10 +22,6 @@ const RandomizerComponents = () => {
         firstPlayer();
         alert (`${randomPlayerOrder} player goes first`);
     };
-
-    function firstPlayer() {
-        randomPlayerOrder = playerOrder[Math.floor(Math.random() * playerOrder.length)];
-    }
 
     function dieRoll() {
         randomDieRoll = sixSidedDieArray[Math.floor(Math.random() * sixSidedDieArray.length)];

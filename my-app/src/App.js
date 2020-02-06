@@ -7,6 +7,7 @@ import RandomizerComponents from './components/Randomizers/RandomizerComponents'
 
 function App() {
   const [playerArr, setPlayerArr] = useState([]);
+  const [amtPlayers, setAmtPlayers] = useState(0);
 
   const initiatePlayers = num => {
       let array;
@@ -18,6 +19,7 @@ function App() {
               array[index] = <PlayerHealthTracker key={index++} name={`Player ${index}`} />;
           }
       }
+      setAmtPlayers(num);
       setPlayerArr([...array]);
   };
 
@@ -25,7 +27,7 @@ function App() {
     <React.Fragment>
       <CommanderHealthTrackerTitle />
       <div className={styles.randomizerButtons}>
-      <RandomizerComponents /> 
+      <RandomizerComponents numPlayers={amtPlayers} /> 
       </div>
       <AddPlayersComponent initiate={initiatePlayers}/>
         <div className={styles.playerFlexContainer}> 
