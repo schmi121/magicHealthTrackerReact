@@ -12,6 +12,7 @@
     border-style: solid;
     border-width: medium;
     align-items: center;
+    margin: 2rem;
 }
 
 .playerName {

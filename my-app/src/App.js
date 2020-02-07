@@ -31,11 +31,12 @@ function App() {
       </div>
       <AddPlayersComponent initiate={initiatePlayers}/>
         <div className={styles.playerFlexContainer}> 
-          {playerArr}
+          <div className={styles.players}>
+            {playerArr}
+          </div>
         </div>  
     </React.Fragment>
   );
-}
-
+};
 
 export default App;
